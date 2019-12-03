@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Student(age,sex){
+				this.age=age;
+				this.sex=sex;
+				
+			}
+			Student.prototype={
+				//需要手动添加构造器的指向
+				constructor:Student,
+				height:"188",
+				weight:"65",
+				study:function (){
+					console.log("学习开心，天天向上");
+				},
+				eat:function (){
+					console.log("你好啊");
+				}				
+			}
+			var per=new Student(12,"男");
+			console.dir(per);
+			
+		</script>
+	</body>
+</html>

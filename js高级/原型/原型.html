@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+			function Person (name,age){
+				this.name=name;
+				this.age=age;
+			}
+			//使用原型为了共享数据，节省空间
+			Person.prototype.eat=function (){
+				console.log("点击添加");
+			}
+			var per=new Person("小敏","56");
+			per.eat();
+			console.dir(per);//实例对象的结构
+			console.dir(Person);//构造函数的结构
+		</script>
+</html>

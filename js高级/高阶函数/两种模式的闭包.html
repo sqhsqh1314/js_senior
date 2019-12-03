@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//函数方式的闭包
+			function ff(){
+				var num=10;
+				function ff2(){
+					console.log(num);
+				}
+				ff2();
+			}
+			ff();
+			//对象方式的闭包
+			function ff(){
+				var num=20;
+				var obj={
+					age:num
+					
+				};
+				console.log(obj.age);
+			}
+			ff();
+		</script>
+	</body>
+</html>

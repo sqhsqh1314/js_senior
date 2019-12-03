@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<div><ul>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+			</ul>
+			<ul>
+				<li></li>
+			</ul>
+			</div>
+			<div><span></span></div>
+			<div>
+				<a href=""><span></span><span></span></a>
+			</div>
+		</div>
+		<script>
+			//获取页面中的根节点标签
+			var document=document.documentElement;
+			//根据父节点找出所有的子节点并显示
+			function forDom(root){
+				//获取根节点的所有子节点
+				var roots=root.children;
+				//遍历所有的字节点函数
+				
+				allNode(roots);
+			}
+			//显示所有子节点
+			
+			function allNode(childrennode){
+				for (var i=0;i<childrennode.length;i++) {
+					//每个子节点
+					var everynode=childrennode[i];
+					//显示每个子节点的名字
+					f1(everynode);
+					//如果子节点中还有子节点，调用函数继续遍历
+					everynode.children&&forDom(everynode);
+				}
+				
+			}
+			forDom(document);
+			function f1(node){
+				console.log("节点名字为："+node.nodeName);
+				
+			}
+			
+		</script>
+	</body>
+</html>

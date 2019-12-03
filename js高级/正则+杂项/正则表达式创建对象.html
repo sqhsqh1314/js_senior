@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg=new RegExp(/\d{5}/);
+			var str="我的电话是111029";
+			var flag=reg.test(str);
+			console.log(flag);
+			//进行改写
+			var reg=new RegExp(/\d{5}/);
+			var flag=reg.test("sdfhsf3134235");
+			console.log(flag);
+			console.log(/./.test("245324"));
+			
+			
+		</script>
+	</body>
+</html>

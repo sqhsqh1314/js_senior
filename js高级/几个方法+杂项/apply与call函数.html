@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function f1(x,y){
+				console.log("结果是："+(x+y)+this);
+				
+			}
+			f1(10,20);
+			f1();
+			//在里面传输值，或者不传输值时，跟直接调用一样
+			f1.call(null);
+			f1.apply(null);
+		</script>
+	</body>
+</html>

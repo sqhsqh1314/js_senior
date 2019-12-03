@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			var obj1 = {
+				name: "小明",
+				age: 23,
+				hobby: ["打篮球", "打羽毛球", "学习"],
+				dog: {
+					name: "大黄",
+					age: 5,
+					color: "黄色"
+
+				}
+			}
+			var obj2={
+				
+			};
+			//通过函数实现深拷贝
+			function shenkaobei(a, b) {
+				for(var key in a) {
+					//先获取每一个属性
+
+					var item = a[key];
+					if(item[key] instanceof Array) {
+						b[key] = [];
+						shenkaobei(item, b[key]);
+
+					} else if(item[key] instanceof Object) {
+						b[key] = [];
+						shenkaobei(item, b[key]);
+
+					} else {
+						b[key] = a[key];
+					}
+				}
+			};
+			shenkaobei(obj1,obj2);
+			console.dir(obj1);
+			console.dir(obj2);
+			
+			
+		</script>
+	</body>
+
+</html>

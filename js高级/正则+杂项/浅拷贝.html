@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var obj={
+				name:"小敏",
+				sex:"男",
+				car:["宝马","特斯拉","奔驰"]
+			}
+			//另一个对象
+			var obj1={
+				
+			}
+			function extend(a,b){
+				for (var key in a) {
+					b[key]=a[key];
+					
+				}
+				
+			}
+			extend(obj,obj1);
+			console.dir(obj);			
+			console.dir(obj1);
+		</script>
+	</body>
+</html>

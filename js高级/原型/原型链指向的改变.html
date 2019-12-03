@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Person(age){
+				this.age=age;
+				console.log(this);
+				
+			}
+			Person.prototype.all=function (){
+				console.log("你好啊");
+			}
+			function Son(name,age){
+				this.age=age;
+				this.name=name;
+			}
+			Son.prototype.eat=function (){
+				console.log("好好吃放");
+			}
+			Person.prototype=new Son();
+			var per=new Person();
+//			per.all();//会报错，以为他的原型指向进行了改变
+			per.eat();
+		</script>
+	</body>
+</html>

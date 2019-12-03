@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Person(age,color){
+				this.name=name;
+				this.age=age;
+				this.color=color;
+			}
+			Person.prototype.eat=function (x,y){
+					console.log("结果是："+(x+y)+this);
+			}
+			function Son (age){
+				this.age=age;
+				
+				
+			}
+			var per=new Person(10);
+			var son=new Son(100);
+			per.eat.apply(son,[30,40]);
+			per.eat.call(son,30,0);
+			
+		</script>
+
+	</body>
+</html>

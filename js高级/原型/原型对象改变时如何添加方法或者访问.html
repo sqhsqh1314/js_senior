@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Person(age,name){
+				this.age=age;
+				this.name=name;
+				
+			};
+				
+			Person.prototype={
+				all:function (){
+					alert("改变指向");
+				}
+			};
+			//在原型链改变之后添加原型即可。
+			Person.prototype.eat=function (){
+				console.log("添加成功");
+			};
+		
+			var per =new Person();
+			per.eat();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function ShowRandom(){
+				//1-10的随机数
+				this.number=parseInt(Math.random()*10+1);
+				
+				
+			}
+			//添加原型方法
+			ShowRandom.prototype.show=function (){
+				
+				window.setInterval(this.show1.bind(this),1000);
+			}
+			ShowRandom.prototype.show1=function (){
+				console.log(this.number);
+			}
+			var random=new ShowRandom();
+			random.show();
+		</script>
+	</body>
+</html>

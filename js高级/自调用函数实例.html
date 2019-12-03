@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			(function zidiaoyong(window){
+				function random (){
+					
+				}
+				random.prototype.getRandom=function (){
+					return Math.floor(Math.random()*5);
+					
+				}
+				window.random=random;
+			}
+			)(window)
+			var rm=new random();
+			console.log(rm.getRandom());
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

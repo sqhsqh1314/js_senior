@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Person (name,age,weight,height){
+				this.name=name;
+				this.age=age;
+				this.weight=weight;
+				this.height=height;				
+			}
+			Person.prototype.eat=function (){
+				console.log("好吃好哦和");
+			}
+			function Student(name,age,weight,height,score){
+				//借用构造函数实现
+				Person.call(this,name,age,weight,height);
+				this.score=score;
+				
+			}
+			Student.prototype=new Person();
+			var stu=new Student("小明",19,27,175,290);
+			console.log(stu.age);
+			console.log(stu.height);
+			console.log(stu.weight);
+			stu.eat();
+			
+	
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			//自变量方式创建对象
+			var obj = {
+				name: "小明",
+				sex: "男",
+				age: 23,
+				eat: function() {
+					console.log("dsdfas");
+				}
+			}
+			console.log(obj);
+			//调用系统的构造函数创建对象
+			var obj2 = new Object();
+			obj2.name = "sfs";
+			obj2.age = 25;
+			obj2.eat = function() {
+				console.log("32424");
+			}
+			console.log(obj2);
+			//自动构造函数创建对象
+			function Person(name, age, weight, height) {
+				this.name = name;
+				this.age = age;
+				this.weight = weight;
+				this.height = height;
+			}
+			Person.prototype.eat = function() {
+				console.log("好吃好哦和");
+			}
+			console.log(Person);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Person (name,age){
+				this.name=name;
+				this.age=age;
+				
+			}
+			Person.prototype.eat=function (){
+				console.log("吃点东西");
+			}
+			var p1=new Person("小明",10);
+			var p2=new Person("小红",30);
+			console.log(p1.eat()==p2.eat());			
+		</script>
+	</body>
+</html>
